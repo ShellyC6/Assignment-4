@@ -11,7 +11,7 @@ namespace GameCardLib
         Suit cardSuit;
         Value cardValue;
 
-        Card(Suit _suit, Value _value)
+        public Card(Suit _suit, Value _value)
         {
             cardSuit = _suit;
             cardValue = _value;

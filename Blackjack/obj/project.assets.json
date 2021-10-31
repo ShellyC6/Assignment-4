@@ -1,21 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {
-      "Blackjack/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "GameCardLib": "1.0.0",
-          "UtilitiesLib": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Blackjack.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Blackjack.dll": {}
-        }
-      },
+    "net5.0": {
       "GameCardLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -42,11 +28,6 @@
     }
   },
   "libraries": {
-    "Blackjack/1.0.0": {
-      "type": "project",
-      "path": "../Blackjack/Blackjack.csproj",
-      "msbuildProject": "../Blackjack/Blackjack.csproj"
-    },
     "GameCardLib/1.0.0": {
       "type": "project",
       "path": "../GameCardLib/GameCardLib.csproj",
@@ -59,8 +40,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": [
-      "Blackjack >= 1.0.0",
+    "net5.0": [
       "GameCardLib >= 1.0.0",
       "UtilitiesLib >= 1.0.0"
     ]
@@ -71,30 +51,27 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Assignment4\\Assignment4.csproj",
-      "projectName": "Assignment4",
-      "projectPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Assignment4\\Assignment4.csproj",
+      "projectUniqueName": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Blackjack\\Blackjack.csproj",
+      "projectName": "Blackjack",
+      "projectPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Blackjack\\Blackjack.csproj",
       "packagesPath": "C:\\Users\\shell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Assignment4\\obj\\",
+      "outputPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Blackjack\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shell\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows7.0"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Blackjack\\Blackjack.csproj": {
-              "projectPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Blackjack\\Blackjack.csproj"
-            },
             "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\GameCardLib\\GameCardLib.csproj": {
               "projectPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\GameCardLib\\GameCardLib.csproj"
             },
@@ -111,8 +88,8 @@
       }
     },
     "frameworks": {
-      "net5.0-windows7.0": {
-        "targetAlias": "net5.0-windows",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "imports": [
           "net461",
           "net462",
@@ -126,9 +103,6 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
