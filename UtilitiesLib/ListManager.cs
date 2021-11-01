@@ -20,6 +20,12 @@ namespace GameCardLib
             set { m_list = value;  }
         }
 
+        public void Shuffle()
+        {
+            var rnd = new Random();
+            var randomized = m_list.OrderBy(item => rnd.Next());
+        }
+
         public int Count()
         {
             return m_list.Count;
