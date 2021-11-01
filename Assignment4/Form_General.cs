@@ -19,6 +19,7 @@ namespace Assignment4
         public Form_General()
         {
             InitializeComponent();
+            groupBox_Play.Visible = false;
             ClearTablePlayer(groupBox_CurrentPlayer, label_NameCurrentPlayer, label_ScoreCurrentPlayer);
             ClearTablePlayer(groupBox_OtherPlayer, label_NameOtherPlayer, label_ScoreOtherPlayer);
         }
@@ -96,6 +97,7 @@ namespace Assignment4
                 DisplayTable();
                 if(!game.GetPlayer(i).Croupier)
                 {
+                    groupBox_Play.Visible = true;
                     game.Play(game.GetPlayer(i));
                 }
                 DisplayTable();
@@ -141,6 +143,16 @@ namespace Assignment4
 
                 DisplayTable();
             }
+        }
+
+        private void button_Yes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_No_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

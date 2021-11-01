@@ -47,10 +47,14 @@ namespace Assignment4
             this.listBox_Losers = new System.Windows.Forms.ListBox();
             this.label_Winners = new System.Windows.Forms.Label();
             this.listBox_Winners = new System.Windows.Forms.ListBox();
+            this.groupBox_Play = new System.Windows.Forms.GroupBox();
+            this.button_Yes = new System.Windows.Forms.Button();
+            this.button_No = new System.Windows.Forms.Button();
             this.groupBox_Menu.SuspendLayout();
             this.groupBox_Table.SuspendLayout();
             this.groupBox_OtherPlayer.SuspendLayout();
             this.groupBox_CurrentPlayer.SuspendLayout();
+            this.groupBox_Play.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_Menu
@@ -96,6 +100,7 @@ namespace Assignment4
             // 
             // groupBox_Table
             // 
+            this.groupBox_Table.Controls.Add(this.groupBox_Play);
             this.groupBox_Table.Controls.Add(this.groupBox_OtherPlayer);
             this.groupBox_Table.Controls.Add(this.groupBox_CurrentPlayer);
             this.groupBox_Table.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -114,7 +119,7 @@ namespace Assignment4
             this.groupBox_OtherPlayer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox_OtherPlayer.Location = new System.Drawing.Point(446, 35);
             this.groupBox_OtherPlayer.Name = "groupBox_OtherPlayer";
-            this.groupBox_OtherPlayer.Size = new System.Drawing.Size(405, 578);
+            this.groupBox_OtherPlayer.Size = new System.Drawing.Size(405, 436);
             this.groupBox_OtherPlayer.TabIndex = 1;
             this.groupBox_OtherPlayer.TabStop = false;
             this.groupBox_OtherPlayer.Text = "Other player";
@@ -125,7 +130,7 @@ namespace Assignment4
             this.listView_OtherPlayer.HideSelection = false;
             this.listView_OtherPlayer.Location = new System.Drawing.Point(16, 91);
             this.listView_OtherPlayer.Name = "listView_OtherPlayer";
-            this.listView_OtherPlayer.Size = new System.Drawing.Size(373, 470);
+            this.listView_OtherPlayer.Size = new System.Drawing.Size(373, 325);
             this.listView_OtherPlayer.TabIndex = 3;
             this.listView_OtherPlayer.UseCompatibleStateImageBehavior = false;
             // 
@@ -157,7 +162,7 @@ namespace Assignment4
             this.groupBox_CurrentPlayer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox_CurrentPlayer.Location = new System.Drawing.Point(18, 35);
             this.groupBox_CurrentPlayer.Name = "groupBox_CurrentPlayer";
-            this.groupBox_CurrentPlayer.Size = new System.Drawing.Size(408, 578);
+            this.groupBox_CurrentPlayer.Size = new System.Drawing.Size(408, 436);
             this.groupBox_CurrentPlayer.TabIndex = 0;
             this.groupBox_CurrentPlayer.TabStop = false;
             this.groupBox_CurrentPlayer.Text = "Current player";
@@ -168,7 +173,7 @@ namespace Assignment4
             this.listView_CurrentPlayer.HideSelection = false;
             this.listView_CurrentPlayer.Location = new System.Drawing.Point(16, 91);
             this.listView_CurrentPlayer.Name = "listView_CurrentPlayer";
-            this.listView_CurrentPlayer.Size = new System.Drawing.Size(373, 470);
+            this.listView_CurrentPlayer.Size = new System.Drawing.Size(373, 325);
             this.listView_CurrentPlayer.TabIndex = 2;
             this.listView_CurrentPlayer.UseCompatibleStateImageBehavior = false;
             // 
@@ -242,6 +247,37 @@ namespace Assignment4
             this.listBox_Winners.TabIndex = 6;
             this.listBox_Winners.SelectedIndexChanged += new System.EventHandler(this.listBox_Winners_SelectedIndexChanged);
             // 
+            // groupBox_Play
+            // 
+            this.groupBox_Play.Controls.Add(this.button_No);
+            this.groupBox_Play.Controls.Add(this.button_Yes);
+            this.groupBox_Play.Location = new System.Drawing.Point(18, 493);
+            this.groupBox_Play.Name = "groupBox_Play";
+            this.groupBox_Play.Size = new System.Drawing.Size(408, 120);
+            this.groupBox_Play.TabIndex = 2;
+            this.groupBox_Play.TabStop = false;
+            this.groupBox_Play.Text = "Do you want to take an other card?";
+            // 
+            // button_Yes
+            // 
+            this.button_Yes.Location = new System.Drawing.Point(85, 31);
+            this.button_Yes.Name = "button_Yes";
+            this.button_Yes.Size = new System.Drawing.Size(77, 69);
+            this.button_Yes.TabIndex = 0;
+            this.button_Yes.Text = "Yes";
+            this.button_Yes.UseVisualStyleBackColor = true;
+            this.button_Yes.Click += new System.EventHandler(this.button_Yes_Click);
+            // 
+            // button_No
+            // 
+            this.button_No.Location = new System.Drawing.Point(229, 31);
+            this.button_No.Name = "button_No";
+            this.button_No.Size = new System.Drawing.Size(77, 69);
+            this.button_No.TabIndex = 1;
+            this.button_No.Text = "No";
+            this.button_No.UseVisualStyleBackColor = true;
+            this.button_No.Click += new System.EventHandler(this.button_No_Click);
+            // 
             // Form_General
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -263,6 +299,7 @@ namespace Assignment4
             this.groupBox_OtherPlayer.PerformLayout();
             this.groupBox_CurrentPlayer.ResumeLayout(false);
             this.groupBox_CurrentPlayer.PerformLayout();
+            this.groupBox_Play.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,6 +325,9 @@ namespace Assignment4
         private System.Windows.Forms.Button button_Shuffle;
         private System.Windows.Forms.ListView listView_OtherPlayer;
         private System.Windows.Forms.ListView listView_CurrentPlayer;
+        private System.Windows.Forms.GroupBox groupBox_Play;
+        private System.Windows.Forms.Button button_No;
+        private System.Windows.Forms.Button button_Yes;
     }
 }
 
