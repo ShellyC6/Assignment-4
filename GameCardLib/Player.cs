@@ -24,6 +24,11 @@ namespace GameCardLib
             hand = new Deck();
         }
 
+        public Deck Hand
+        {
+            get { return hand; }
+        }
+
         public string Name
         {
             get { return name; }

@@ -52,15 +52,20 @@ namespace Assignment4
         private void DisplayTable()
         {
             if (game.CurrentPlayer != null)
-                DisplayTablePlayer(game.GetPlayer(game.CurrentPlayer), groupBox_CurrentPlayer, label_NameCurrentPlayer, label_ScoreCurrentPlayer);
+                DisplayTablePlayer(game.GetPlayer(game.CurrentPlayer), groupBox_CurrentPlayer, label_NameCurrentPlayer, label_ScoreCurrentPlayer, listView_CurrentPlayer);
             if (getSelectedPlayer() != null)
-                DisplayTablePlayer(game.GetPlayer(getSelectedPlayer()), groupBox_OtherPlayer, label_NameOtherPlayer, label_ScoreOtherPlayer);
+                DisplayTablePlayer(game.GetPlayer(getSelectedPlayer()), groupBox_OtherPlayer, label_NameOtherPlayer, label_ScoreOtherPlayer, listView_OtherPlayer);
         }
 
-        private void DisplayTablePlayer(Player player, GroupBox group, Label name, Label score)
+        private void DisplayTablePlayer(Player player, GroupBox group, Label name, Label score, ListView cards)
         {
             name.Text = player.ToString();
             score.Text = player.Score.ToString();
+
+            cards.Items.Clear();
+            foreach (Card card in player.Hand.Cards.M_list)
+                cards.Items.Add(card.ToString());
+
             group.Visible = true;
         }
 

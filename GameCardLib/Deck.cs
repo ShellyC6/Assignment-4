@@ -13,6 +13,11 @@ namespace GameCardLib
             cards = new ListManager<Card>();
         }
 
+        public ListManager<Card> Cards
+        {
+            get { return cards; }
+        }
+
         public int Count()
         {
             return cards.Count();
