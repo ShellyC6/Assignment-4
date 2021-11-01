@@ -35,9 +35,11 @@ namespace Assignment4
             this.listBox_Croupier = new System.Windows.Forms.ListBox();
             this.groupBox_Table = new System.Windows.Forms.GroupBox();
             this.groupBox_OtherPlayer = new System.Windows.Forms.GroupBox();
+            this.listView_OtherPlayer = new System.Windows.Forms.ListView();
             this.label_ScoreOtherPlayer = new System.Windows.Forms.Label();
             this.label_NameOtherPlayer = new System.Windows.Forms.Label();
             this.groupBox_CurrentPlayer = new System.Windows.Forms.GroupBox();
+            this.listView_CurrentPlayer = new System.Windows.Forms.ListView();
             this.label_ScoreCurrentPlayer = new System.Windows.Forms.Label();
             this.label_NameCurrentPlayer = new System.Windows.Forms.Label();
             this.label_Croupier = new System.Windows.Forms.Label();
@@ -106,6 +108,7 @@ namespace Assignment4
             // 
             // groupBox_OtherPlayer
             // 
+            this.groupBox_OtherPlayer.Controls.Add(this.listView_OtherPlayer);
             this.groupBox_OtherPlayer.Controls.Add(this.label_ScoreOtherPlayer);
             this.groupBox_OtherPlayer.Controls.Add(this.label_NameOtherPlayer);
             this.groupBox_OtherPlayer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -115,6 +118,16 @@ namespace Assignment4
             this.groupBox_OtherPlayer.TabIndex = 1;
             this.groupBox_OtherPlayer.TabStop = false;
             this.groupBox_OtherPlayer.Text = "Other player";
+            // 
+            // listView_OtherPlayer
+            // 
+            this.listView_OtherPlayer.BackColor = System.Drawing.SystemColors.Menu;
+            this.listView_OtherPlayer.HideSelection = false;
+            this.listView_OtherPlayer.Location = new System.Drawing.Point(16, 91);
+            this.listView_OtherPlayer.Name = "listView_OtherPlayer";
+            this.listView_OtherPlayer.Size = new System.Drawing.Size(373, 470);
+            this.listView_OtherPlayer.TabIndex = 3;
+            this.listView_OtherPlayer.UseCompatibleStateImageBehavior = false;
             // 
             // label_ScoreOtherPlayer
             // 
@@ -138,6 +151,7 @@ namespace Assignment4
             // 
             // groupBox_CurrentPlayer
             // 
+            this.groupBox_CurrentPlayer.Controls.Add(this.listView_CurrentPlayer);
             this.groupBox_CurrentPlayer.Controls.Add(this.label_ScoreCurrentPlayer);
             this.groupBox_CurrentPlayer.Controls.Add(this.label_NameCurrentPlayer);
             this.groupBox_CurrentPlayer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -147,6 +161,16 @@ namespace Assignment4
             this.groupBox_CurrentPlayer.TabIndex = 0;
             this.groupBox_CurrentPlayer.TabStop = false;
             this.groupBox_CurrentPlayer.Text = "Current player";
+            // 
+            // listView_CurrentPlayer
+            // 
+            this.listView_CurrentPlayer.BackColor = System.Drawing.SystemColors.Menu;
+            this.listView_CurrentPlayer.HideSelection = false;
+            this.listView_CurrentPlayer.Location = new System.Drawing.Point(16, 91);
+            this.listView_CurrentPlayer.Name = "listView_CurrentPlayer";
+            this.listView_CurrentPlayer.Size = new System.Drawing.Size(373, 470);
+            this.listView_CurrentPlayer.TabIndex = 2;
+            this.listView_CurrentPlayer.UseCompatibleStateImageBehavior = false;
             // 
             // label_ScoreCurrentPlayer
             // 
@@ -262,6 +286,8 @@ namespace Assignment4
         private System.Windows.Forms.Label label_ScoreCurrentPlayer;
         private System.Windows.Forms.Label label_NameCurrentPlayer;
         private System.Windows.Forms.Button button_Shuffle;
+        private System.Windows.Forms.ListView listView_OtherPlayer;
+        private System.Windows.Forms.ListView listView_CurrentPlayer;
     }
 }
 

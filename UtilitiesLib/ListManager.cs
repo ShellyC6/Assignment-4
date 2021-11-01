@@ -22,8 +22,14 @@ namespace GameCardLib
 
         public void Shuffle()
         {
-            var rnd = new Random();
-            var randomized = m_list.OrderBy(item => rnd.Next());
+            Random rnd = new Random();
+            for (int i = 0; i < Count(); i++)
+            {
+                int k = rnd.Next(0, i);
+                T value = m_list[k];
+                m_list[k] = m_list[i];
+                m_list[i] = value;
+            }
         }
 
         public int Count()

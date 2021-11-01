@@ -39,11 +39,11 @@ namespace Assignment4
 
         private string getSelectedPlayer()
         {
-            if (listBox_Croupier.SelectedIndex >= 0)
+            if (listBox_Croupier.SelectedIndex != -1)
                 return game.GetCroupier().Name;
-            if (listBox_Winners.SelectedIndex >= 0)
+            if (listBox_Winners.SelectedIndex != -1) 
                 return game.GetWinners().GetAt(listBox_Winners.SelectedIndex).Name;
-            if (listBox_Losers.SelectedIndex >= 0)
+            if (listBox_Losers.SelectedIndex != -1) 
                 return game.GetLosers().GetAt(listBox_Losers.SelectedIndex).Name;
 
             return null;
@@ -88,10 +88,12 @@ namespace Assignment4
             // Each player plays
             for(int i =0;i<game.NbPlayers;i++)
             {
+                DisplayTable();
                 if(!game.GetPlayer(i).Croupier)
                 {
                     game.Play(game.GetPlayer(i));
                 }
+                DisplayTable();
             }
             // The croupier plays
             game.Play(game.GetCroupier());
@@ -109,6 +111,8 @@ namespace Assignment4
             {
                 listBox_Winners.ClearSelected();
                 listBox_Losers.ClearSelected();
+
+                DisplayTable();
             }
         }
 
@@ -118,6 +122,8 @@ namespace Assignment4
             {
                 listBox_Croupier.ClearSelected();
                 listBox_Losers.ClearSelected();
+
+                DisplayTable();
             }
         }
 
@@ -127,6 +133,8 @@ namespace Assignment4
             {
                 listBox_Croupier.ClearSelected();
                 listBox_Winners.ClearSelected();
+
+                DisplayTable();
             }
         }
     }

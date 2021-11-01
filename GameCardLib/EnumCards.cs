@@ -7,7 +7,6 @@ namespace GameCardLib
 {
     public enum Suit
     {
-        nothing,
         clubs,
         diamonds,
         hearts,
@@ -16,7 +15,6 @@ namespace GameCardLib
 
     public enum Value
     {
-        nothing = 0,
         ace = 1,
         two = 2,
         three = 3,
