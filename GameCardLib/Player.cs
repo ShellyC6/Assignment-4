@@ -10,15 +10,30 @@ namespace GameCardLib
     {
         Hand hand;
         string name;
+        bool croupier;
+
+        public Player(string _name, bool _croupier)
+        {
+            name = _name;
+            croupier = _croupier;
+        }
 
         public string Name
         {
             get { return name; }
         }
 
-        public Player(string _name)
+        public bool Croupier
         {
-            name = _name;
+            get { return croupier; }
+        }
+
+        public override string ToString()
+        {
+            string String = Name;
+            if (Croupier)
+                String += "\t" + "croupier";
+            return String;
         }
     }
 }

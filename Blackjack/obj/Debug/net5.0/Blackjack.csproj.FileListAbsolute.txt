@@ -1,0 +1,17 @@
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\bin\Debug\net5.0\Blackjack.deps.json
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\bin\Debug\net5.0\Blackjack.dll
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\bin\Debug\net5.0\ref\Blackjack.dll
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\bin\Debug\net5.0\Blackjack.pdb
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\bin\Debug\net5.0\GameCardLib.dll
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\bin\Debug\net5.0\UtilitiesLib.dll
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\bin\Debug\net5.0\GameCardLib.pdb
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\bin\Debug\net5.0\UtilitiesLib.pdb
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\obj\Debug\net5.0\Blackjack.csproj.AssemblyReference.cache
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\obj\Debug\net5.0\Blackjack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\obj\Debug\net5.0\Blackjack.AssemblyInfoInputs.cache
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\obj\Debug\net5.0\Blackjack.AssemblyInfo.cs
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\obj\Debug\net5.0\Blackjack.csproj.CoreCompileInputs.cache
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\obj\Debug\net5.0\Blackjack.csproj.CopyComplete
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\obj\Debug\net5.0\Blackjack.dll
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\obj\Debug\net5.0\ref\Blackjack.dll
+C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Blackjack\obj\Debug\net5.0\Blackjack.pdb
