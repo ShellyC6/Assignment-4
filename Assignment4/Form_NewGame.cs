@@ -16,6 +16,7 @@ namespace Assignment4
     public partial class Form_NewGame : Form
     {
         ListManager<Player> players;
+        Game game = null;
 
         public Form_NewGame()
         {
@@ -23,9 +24,9 @@ namespace Assignment4
             players = new ListManager<Player>();
         }
 
-        public Game CreateGame()
+        public Game Game
         {
-            return null;
+            get { return game; }
         }
 
         private void DisplayPlayers()
@@ -37,12 +38,55 @@ namespace Assignment4
             }
         }
 
-        private void button_StartGame_Click(object sender, EventArgs e)
+        private bool ValidateInputGame()
         {
+            bool croupier=false, player = false;
+            for (int i = 0; i < players.Count(); i++) 
+            {
+                if (players.GetAt(i).Croupier)
+                    croupier = true;
+                else
+                    player = true;
+            }
 
+            if(!croupier)
+            {
+                MessageBox.Show("You need a croupier to play");
+                return false;
+            }
+            if(!player)
+            {
+                MessageBox.Show("You need at least one player");
+                return false;
+            }
+
+            int number;
+            if (Int32.TryParse(textBox_NbDecks.Text, out number) == false)
+            {
+                MessageBox.Show("You need at least one deck");
+                return false;
+            }
+            if (number <= 0)
+            {
+                MessageBox.Show("You need at least one deck");
+                return false;
+            }
+
+            return true;
         }
 
-        private bool ValidateInput()
+        private void button_StartGame_Click(object sender, EventArgs e)
+        {
+            if(ValidateInputGame())
+            {
+                int number;
+                Int32.TryParse(textBox_NbDecks.Text, out number);
+                game = new Game(players.Count(), number, players);
+                Close();
+            }
+        }
+
+        private bool ValidateInputPlayer()
         {
             for (int i = 0; i < players.Count(); i++)
             {
@@ -66,7 +110,7 @@ namespace Assignment4
         private void button_AddPlayer_Click(object sender, EventArgs e)
         {
             // Add the new player if it doesn't exist already
-            if (ValidateInput())
+            if (ValidateInputPlayer())
                 players.Add(new Player(textBox_NameNewPlayer.Text, checkBox_Croupier.Checked));
 
             // Display the players

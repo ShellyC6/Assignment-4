@@ -33,6 +33,9 @@ namespace GameCardLib
             string String = Name;
             if (Croupier)
                 String += "\t" + "croupier";
+            else
+                String += "\t" + "player";
+
             return String;
         }
     }

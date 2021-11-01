@@ -22,8 +22,10 @@ namespace Assignment4
 
         private void button_NewGame_Click(object sender, EventArgs e)
         {
-            new Form_NewGame().Show();
-
+            Form_NewGame form = new Form_NewGame();
+            form.ShowDialog();
+            game = form.Game;
+            MessageBox.Show("Done!");
         }
     }
 }
