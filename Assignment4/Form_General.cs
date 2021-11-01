@@ -95,5 +95,11 @@ namespace Assignment4
             // The croupier plays
             game.Play(game.GetCroupier());
         }
+
+        private void button_Shuffle_Click(object sender, EventArgs e)
+        {
+            if (game != null)
+                game.Shuffle();
+        }
     }
 }

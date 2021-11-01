@@ -33,25 +33,27 @@ namespace Assignment4
             this.button_NewGame = new System.Windows.Forms.Button();
             this.listBox_Croupier = new System.Windows.Forms.ListBox();
             this.groupBox_Table = new System.Windows.Forms.GroupBox();
+            this.groupBox_OtherPlayer = new System.Windows.Forms.GroupBox();
+            this.label_ScoreOtherPlayer = new System.Windows.Forms.Label();
+            this.label_NameOtherPlayer = new System.Windows.Forms.Label();
+            this.groupBox_CurrentPlayer = new System.Windows.Forms.GroupBox();
+            this.label_ScoreCurrentPlayer = new System.Windows.Forms.Label();
+            this.label_NameCurrentPlayer = new System.Windows.Forms.Label();
             this.label_Croupier = new System.Windows.Forms.Label();
             this.label_Losers = new System.Windows.Forms.Label();
             this.listBox_Losers = new System.Windows.Forms.ListBox();
             this.label_Winners = new System.Windows.Forms.Label();
             this.listBox_Winners = new System.Windows.Forms.ListBox();
-            this.groupBox_CurrentPlayer = new System.Windows.Forms.GroupBox();
-            this.groupBox_OtherPlayer = new System.Windows.Forms.GroupBox();
-            this.label_NameCurrentPlayer = new System.Windows.Forms.Label();
-            this.label_ScoreCurrentPlayer = new System.Windows.Forms.Label();
-            this.label_ScoreOtherPlayer = new System.Windows.Forms.Label();
-            this.label_NameOtherPlayer = new System.Windows.Forms.Label();
+            this.button_Shuffle = new System.Windows.Forms.Button();
             this.groupBox_Menu.SuspendLayout();
             this.groupBox_Table.SuspendLayout();
-            this.groupBox_CurrentPlayer.SuspendLayout();
             this.groupBox_OtherPlayer.SuspendLayout();
+            this.groupBox_CurrentPlayer.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_Menu
             // 
+            this.groupBox_Menu.Controls.Add(this.button_Shuffle);
             this.groupBox_Menu.Controls.Add(this.button_NewGame);
             this.groupBox_Menu.Location = new System.Drawing.Point(1130, 12);
             this.groupBox_Menu.Name = "groupBox_Menu";
@@ -90,6 +92,70 @@ namespace Assignment4
             this.groupBox_Table.TabIndex = 2;
             this.groupBox_Table.TabStop = false;
             this.groupBox_Table.Text = "Table";
+            // 
+            // groupBox_OtherPlayer
+            // 
+            this.groupBox_OtherPlayer.Controls.Add(this.label_ScoreOtherPlayer);
+            this.groupBox_OtherPlayer.Controls.Add(this.label_NameOtherPlayer);
+            this.groupBox_OtherPlayer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox_OtherPlayer.Location = new System.Drawing.Point(446, 35);
+            this.groupBox_OtherPlayer.Name = "groupBox_OtherPlayer";
+            this.groupBox_OtherPlayer.Size = new System.Drawing.Size(405, 578);
+            this.groupBox_OtherPlayer.TabIndex = 1;
+            this.groupBox_OtherPlayer.TabStop = false;
+            this.groupBox_OtherPlayer.Text = "Other player";
+            // 
+            // label_ScoreOtherPlayer
+            // 
+            this.label_ScoreOtherPlayer.AutoSize = true;
+            this.label_ScoreOtherPlayer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_ScoreOtherPlayer.Location = new System.Drawing.Point(299, 40);
+            this.label_ScoreOtherPlayer.Name = "label_ScoreOtherPlayer";
+            this.label_ScoreOtherPlayer.Size = new System.Drawing.Size(52, 23);
+            this.label_ScoreOtherPlayer.TabIndex = 3;
+            this.label_ScoreOtherPlayer.Text = "Score";
+            // 
+            // label_NameOtherPlayer
+            // 
+            this.label_NameOtherPlayer.AutoSize = true;
+            this.label_NameOtherPlayer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_NameOtherPlayer.Location = new System.Drawing.Point(16, 40);
+            this.label_NameOtherPlayer.Name = "label_NameOtherPlayer";
+            this.label_NameOtherPlayer.Size = new System.Drawing.Size(203, 23);
+            this.label_NameOtherPlayer.TabIndex = 2;
+            this.label_NameOtherPlayer.Text = "Name of the other player";
+            // 
+            // groupBox_CurrentPlayer
+            // 
+            this.groupBox_CurrentPlayer.Controls.Add(this.label_ScoreCurrentPlayer);
+            this.groupBox_CurrentPlayer.Controls.Add(this.label_NameCurrentPlayer);
+            this.groupBox_CurrentPlayer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox_CurrentPlayer.Location = new System.Drawing.Point(18, 35);
+            this.groupBox_CurrentPlayer.Name = "groupBox_CurrentPlayer";
+            this.groupBox_CurrentPlayer.Size = new System.Drawing.Size(408, 578);
+            this.groupBox_CurrentPlayer.TabIndex = 0;
+            this.groupBox_CurrentPlayer.TabStop = false;
+            this.groupBox_CurrentPlayer.Text = "Current player";
+            // 
+            // label_ScoreCurrentPlayer
+            // 
+            this.label_ScoreCurrentPlayer.AutoSize = true;
+            this.label_ScoreCurrentPlayer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_ScoreCurrentPlayer.Location = new System.Drawing.Point(299, 40);
+            this.label_ScoreCurrentPlayer.Name = "label_ScoreCurrentPlayer";
+            this.label_ScoreCurrentPlayer.Size = new System.Drawing.Size(52, 23);
+            this.label_ScoreCurrentPlayer.TabIndex = 1;
+            this.label_ScoreCurrentPlayer.Text = "Score";
+            // 
+            // label_NameCurrentPlayer
+            // 
+            this.label_NameCurrentPlayer.AutoSize = true;
+            this.label_NameCurrentPlayer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_NameCurrentPlayer.Location = new System.Drawing.Point(16, 40);
+            this.label_NameCurrentPlayer.Name = "label_NameCurrentPlayer";
+            this.label_NameCurrentPlayer.Size = new System.Drawing.Size(217, 23);
+            this.label_NameCurrentPlayer.TabIndex = 0;
+            this.label_NameCurrentPlayer.Text = "Name of the current player";
             // 
             // label_Croupier
             // 
@@ -139,69 +205,15 @@ namespace Assignment4
             this.listBox_Winners.Size = new System.Drawing.Size(237, 204);
             this.listBox_Winners.TabIndex = 6;
             // 
-            // groupBox_CurrentPlayer
+            // button_Shuffle
             // 
-            this.groupBox_CurrentPlayer.Controls.Add(this.label_ScoreCurrentPlayer);
-            this.groupBox_CurrentPlayer.Controls.Add(this.label_NameCurrentPlayer);
-            this.groupBox_CurrentPlayer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_CurrentPlayer.Location = new System.Drawing.Point(18, 35);
-            this.groupBox_CurrentPlayer.Name = "groupBox_CurrentPlayer";
-            this.groupBox_CurrentPlayer.Size = new System.Drawing.Size(408, 578);
-            this.groupBox_CurrentPlayer.TabIndex = 0;
-            this.groupBox_CurrentPlayer.TabStop = false;
-            this.groupBox_CurrentPlayer.Text = "Current player";
-            // 
-            // groupBox_OtherPlayer
-            // 
-            this.groupBox_OtherPlayer.Controls.Add(this.label_ScoreOtherPlayer);
-            this.groupBox_OtherPlayer.Controls.Add(this.label_NameOtherPlayer);
-            this.groupBox_OtherPlayer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_OtherPlayer.Location = new System.Drawing.Point(446, 35);
-            this.groupBox_OtherPlayer.Name = "groupBox_OtherPlayer";
-            this.groupBox_OtherPlayer.Size = new System.Drawing.Size(405, 578);
-            this.groupBox_OtherPlayer.TabIndex = 1;
-            this.groupBox_OtherPlayer.TabStop = false;
-            this.groupBox_OtherPlayer.Text = "Other player";
-            // 
-            // label_NameCurrentPlayer
-            // 
-            this.label_NameCurrentPlayer.AutoSize = true;
-            this.label_NameCurrentPlayer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_NameCurrentPlayer.Location = new System.Drawing.Point(16, 40);
-            this.label_NameCurrentPlayer.Name = "label_NameCurrentPlayer";
-            this.label_NameCurrentPlayer.Size = new System.Drawing.Size(217, 23);
-            this.label_NameCurrentPlayer.TabIndex = 0;
-            this.label_NameCurrentPlayer.Text = "Name of the current player";
-            // 
-            // label_ScoreCurrentPlayer
-            // 
-            this.label_ScoreCurrentPlayer.AutoSize = true;
-            this.label_ScoreCurrentPlayer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_ScoreCurrentPlayer.Location = new System.Drawing.Point(299, 40);
-            this.label_ScoreCurrentPlayer.Name = "label_ScoreCurrentPlayer";
-            this.label_ScoreCurrentPlayer.Size = new System.Drawing.Size(52, 23);
-            this.label_ScoreCurrentPlayer.TabIndex = 1;
-            this.label_ScoreCurrentPlayer.Text = "Score";
-            // 
-            // label_ScoreOtherPlayer
-            // 
-            this.label_ScoreOtherPlayer.AutoSize = true;
-            this.label_ScoreOtherPlayer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_ScoreOtherPlayer.Location = new System.Drawing.Point(299, 40);
-            this.label_ScoreOtherPlayer.Name = "label_ScoreOtherPlayer";
-            this.label_ScoreOtherPlayer.Size = new System.Drawing.Size(52, 23);
-            this.label_ScoreOtherPlayer.TabIndex = 3;
-            this.label_ScoreOtherPlayer.Text = "Score";
-            // 
-            // label_NameOtherPlayer
-            // 
-            this.label_NameOtherPlayer.AutoSize = true;
-            this.label_NameOtherPlayer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_NameOtherPlayer.Location = new System.Drawing.Point(16, 40);
-            this.label_NameOtherPlayer.Name = "label_NameOtherPlayer";
-            this.label_NameOtherPlayer.Size = new System.Drawing.Size(203, 23);
-            this.label_NameOtherPlayer.TabIndex = 2;
-            this.label_NameOtherPlayer.Text = "Name of the other player";
+            this.button_Shuffle.Location = new System.Drawing.Point(18, 91);
+            this.button_Shuffle.Name = "button_Shuffle";
+            this.button_Shuffle.Size = new System.Drawing.Size(151, 40);
+            this.button_Shuffle.TabIndex = 1;
+            this.button_Shuffle.Text = "Shuffle the cards";
+            this.button_Shuffle.UseVisualStyleBackColor = true;
+            this.button_Shuffle.Click += new System.EventHandler(this.button_Shuffle_Click);
             // 
             // Form_General
             // 
@@ -220,10 +232,10 @@ namespace Assignment4
             this.Text = "Form1";
             this.groupBox_Menu.ResumeLayout(false);
             this.groupBox_Table.ResumeLayout(false);
-            this.groupBox_CurrentPlayer.ResumeLayout(false);
-            this.groupBox_CurrentPlayer.PerformLayout();
             this.groupBox_OtherPlayer.ResumeLayout(false);
             this.groupBox_OtherPlayer.PerformLayout();
+            this.groupBox_CurrentPlayer.ResumeLayout(false);
+            this.groupBox_CurrentPlayer.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,6 +258,7 @@ namespace Assignment4
         private System.Windows.Forms.GroupBox groupBox_CurrentPlayer;
         private System.Windows.Forms.Label label_ScoreCurrentPlayer;
         private System.Windows.Forms.Label label_NameCurrentPlayer;
+        private System.Windows.Forms.Button button_Shuffle;
     }
 }
 

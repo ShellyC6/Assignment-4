@@ -91,13 +91,18 @@ namespace Blackjack
             return null;
         }
 
+        public void Shuffle()
+        {
+            deck.Shuffle();
+        }
+
         private void InitialiseDeck()
         {
             for (int i = 0; i < nbDecks; i++) 
             {
                 deck.AddAFullDeck();
             }
-            deck.Shuffle();
+            Shuffle();
         }
 
         public void Play(Player player)
