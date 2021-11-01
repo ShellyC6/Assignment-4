@@ -26,5 +26,10 @@ namespace GameCardLib
         {
             get { return cardValue; }
         }
+
+        public override string ToString()
+        {
+            return cardValue.ToString() + " of " + cardSuit.ToString();
+        }
     }
 }

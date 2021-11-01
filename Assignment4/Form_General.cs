@@ -101,5 +101,32 @@ namespace Assignment4
             if (game != null)
                 game.Shuffle();
         }
+
+        private void listBox_Croupier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox_Croupier.SelectedIndex != -1) 
+            {
+                listBox_Winners.ClearSelected();
+                listBox_Losers.ClearSelected();
+            }
+        }
+
+        private void listBox_Winners_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox_Winners.SelectedIndex != -1) 
+            {
+                listBox_Croupier.ClearSelected();
+                listBox_Losers.ClearSelected();
+            }
+        }
+
+        private void listBox_Losers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox_Losers.SelectedIndex != -1)
+            {
+                listBox_Croupier.ClearSelected();
+                listBox_Winners.ClearSelected();
+            }
+        }
     }
 }

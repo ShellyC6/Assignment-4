@@ -30,6 +30,7 @@ namespace Assignment4
         private void InitializeComponent()
         {
             this.groupBox_Menu = new System.Windows.Forms.GroupBox();
+            this.button_Shuffle = new System.Windows.Forms.Button();
             this.button_NewGame = new System.Windows.Forms.Button();
             this.listBox_Croupier = new System.Windows.Forms.ListBox();
             this.groupBox_Table = new System.Windows.Forms.GroupBox();
@@ -44,7 +45,6 @@ namespace Assignment4
             this.listBox_Losers = new System.Windows.Forms.ListBox();
             this.label_Winners = new System.Windows.Forms.Label();
             this.listBox_Winners = new System.Windows.Forms.ListBox();
-            this.button_Shuffle = new System.Windows.Forms.Button();
             this.groupBox_Menu.SuspendLayout();
             this.groupBox_Table.SuspendLayout();
             this.groupBox_OtherPlayer.SuspendLayout();
@@ -61,6 +61,16 @@ namespace Assignment4
             this.groupBox_Menu.TabIndex = 0;
             this.groupBox_Menu.TabStop = false;
             this.groupBox_Menu.Text = "Menu";
+            // 
+            // button_Shuffle
+            // 
+            this.button_Shuffle.Location = new System.Drawing.Point(18, 91);
+            this.button_Shuffle.Name = "button_Shuffle";
+            this.button_Shuffle.Size = new System.Drawing.Size(151, 40);
+            this.button_Shuffle.TabIndex = 1;
+            this.button_Shuffle.Text = "Shuffle the cards";
+            this.button_Shuffle.UseVisualStyleBackColor = true;
+            this.button_Shuffle.Click += new System.EventHandler(this.button_Shuffle_Click);
             // 
             // button_NewGame
             // 
@@ -80,6 +90,7 @@ namespace Assignment4
             this.listBox_Croupier.Name = "listBox_Croupier";
             this.listBox_Croupier.Size = new System.Drawing.Size(237, 44);
             this.listBox_Croupier.TabIndex = 1;
+            this.listBox_Croupier.SelectedIndexChanged += new System.EventHandler(this.listBox_Croupier_SelectedIndexChanged);
             // 
             // groupBox_Table
             // 
@@ -185,6 +196,7 @@ namespace Assignment4
             this.listBox_Losers.Name = "listBox_Losers";
             this.listBox_Losers.Size = new System.Drawing.Size(237, 204);
             this.listBox_Losers.TabIndex = 4;
+            this.listBox_Losers.SelectedIndexChanged += new System.EventHandler(this.listBox_Losers_SelectedIndexChanged);
             // 
             // label_Winners
             // 
@@ -204,16 +216,7 @@ namespace Assignment4
             this.listBox_Winners.Name = "listBox_Winners";
             this.listBox_Winners.Size = new System.Drawing.Size(237, 204);
             this.listBox_Winners.TabIndex = 6;
-            // 
-            // button_Shuffle
-            // 
-            this.button_Shuffle.Location = new System.Drawing.Point(18, 91);
-            this.button_Shuffle.Name = "button_Shuffle";
-            this.button_Shuffle.Size = new System.Drawing.Size(151, 40);
-            this.button_Shuffle.TabIndex = 1;
-            this.button_Shuffle.Text = "Shuffle the cards";
-            this.button_Shuffle.UseVisualStyleBackColor = true;
-            this.button_Shuffle.Click += new System.EventHandler(this.button_Shuffle_Click);
+            this.listBox_Winners.SelectedIndexChanged += new System.EventHandler(this.listBox_Winners_SelectedIndexChanged);
             // 
             // Form_General
             // 

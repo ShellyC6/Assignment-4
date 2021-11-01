@@ -105,6 +105,11 @@ namespace Blackjack
             Shuffle();
         }
 
+        public void BeginGame()
+        {
+
+        }
+
         public void Play(Player player)
         {
             CurrentPlayer = player.Name;
