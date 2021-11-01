@@ -107,7 +107,26 @@ namespace Blackjack
 
         public void BeginGame()
         {
-
+            foreach (Player player in players.M_list)
+            {
+                if(!player.Croupier)
+                {
+                    for (int i = 0; i < 2; i++)
+                    {
+                        int j = 1;
+                        while (player.Find(deck.GetAt(deck.Count() - j))) { j--; }
+                        player.AddACard(deck.GetAt(deck.Count() - j));
+                        deck.DeleteAt(deck.Count() - j);
+                    }
+                }
+                else
+                {
+                    int j = 1;
+                    while (player.Find(deck.GetAt(deck.Count() - j))) { j--; }
+                    player.AddACard(deck.GetAt(deck.Count() - j));
+                    deck.DeleteAt(deck.Count() - j);
+                }
+            }
         }
 
         public void Play(Player player)

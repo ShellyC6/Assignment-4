@@ -33,44 +33,44 @@ namespace GameCardLib
 
         public bool Add(T aType)
         {
-            //try
-            //{
-                m_list.Add(aType);
-            /*}
-            catch(Exception e)
+            try
             {
-                System.Windows.Forms.MessageBox.Show(e.Message, "Error"); 
+                m_list.Add(aType);
+            }
+            catch(Exception)
+            {
+                //System.Windows.Forms.MessageBox.Show(e.Message, "Error"); 
                 return false;
-            }*/
+            }
             return true;
         }
 
         public bool DeleteAt(int anIndex)
         {
-            //try
-            //{
-                m_list.RemoveAt(anIndex);
-            /*}
-            catch(Exception e)
+            try
             {
-                System.Windows.Forms.MessageBox.Show(e.Message, "Error");
+                m_list.RemoveAt(anIndex);
+            }
+            catch(Exception)
+            {
+                //System.Windows.Forms.MessageBox.Show(e.Message, "Error");
                 return false;
-            }*/
+            }
             return true;
         }
 
         public bool ChangeAt(T aType, int anIndex)
         {
-            //try
-            //{
+            try
+            {
                 m_list.RemoveAt(anIndex);
                 m_list.Insert(anIndex, aType);
-            /*}
-            catch(Exception e)
+            }
+            catch(Exception)
             {
-                System.Windows.Forms.MessageBox.Show(e.Message, "Error");
+                //System.Windows.Forms.MessageBox.Show(e.Message, "Error");
                 return false;
-            }*/
+            }
             return true;
         }
 

@@ -83,6 +83,7 @@ namespace Assignment4
 
         private void Play()
         {
+            game.BeginGame();
             DisplayPlayers();
             // Each player plays
             for(int i =0;i<game.NbPlayers;i++)
