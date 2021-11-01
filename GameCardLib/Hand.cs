@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GameCardLib
 {
-    class Hand
+    public class Hand
     {
+        Deck cards;
     }
 }

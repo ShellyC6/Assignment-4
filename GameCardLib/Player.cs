@@ -8,5 +8,17 @@ namespace GameCardLib
 {
     public class Player
     {
+        Hand hand;
+        string name;
+
+        public string Name
+        {
+            get { return name; }
+        }
+
+        public Player(string _name)
+        {
+            name = _name;
+        }
     }
 }

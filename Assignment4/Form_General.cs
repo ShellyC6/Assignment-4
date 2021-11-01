@@ -7,15 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Blackjack;
 
 namespace Assignment4
 {
-    public partial class Form1 : Form
+    public partial class Form_General : Form
     {
-        public Form1()
+        Game game = null;
+
+        public Form_General()
         {
             InitializeComponent();
         }
 
+        private void button_NewGame_Click(object sender, EventArgs e)
+        {
+            new Form_NewGame().Show();
+
+        }
     }
 }
