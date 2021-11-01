@@ -88,6 +88,11 @@ namespace Assignment4
 
         private bool ValidateInputPlayer()
         {
+            if(textBox_NameNewPlayer.Text=="")
+            {
+                MessageBox.Show("The new player needs a name");
+                return false;
+            }
             for (int i = 0; i < players.Count(); i++)
             {
                 // Search if the name exists
