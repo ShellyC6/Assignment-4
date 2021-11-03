@@ -9,14 +9,18 @@ namespace Blackjack
         int nbDecks;
         ListManager<Player> players;
         string currentPlayer;
+        Player croupier;
+        bool endOfGame;
 
         Deck deck;
 
-        public Game(int _nbPlayers, int _nbDecks, ListManager<Player> _players)
+        public Game(int _nbPlayers, int _nbDecks, ListManager<Player> _players, Player _croupier)
         {
             nbPlayers = _nbPlayers;
             nbDecks = _nbDecks;
             players = _players;
+            croupier = _croupier;
+            endOfGame = false;
             deck = new Deck();
             InitialiseDeck();
         }
@@ -37,14 +41,14 @@ namespace Blackjack
             set { currentPlayer = value; }
         }
 
+        public bool EndOfGame
+        {
+            get { return endOfGame; }
+        }
+
         public Player GetCroupier()
         {
-            foreach(Player player in players.M_list)
-            {
-                if (player.Croupier)
-                    return player;
-            }
-            return null;
+            return croupier;
         }
 
         public ListManager<Player> GetWinners()
@@ -53,7 +57,7 @@ namespace Blackjack
 
             foreach(Player player in players.M_list)
             {
-                if (!player.Croupier && player.Winner)
+                if (player.Winner)
                     winners.Add(player);
             }
 
@@ -66,7 +70,7 @@ namespace Blackjack
 
             foreach (Player player in players.M_list)
             {
-                if (!player.Croupier && !player.Winner)
+                if (!player.Winner)
                     losers.Add(player);
             }
 
@@ -80,6 +84,9 @@ namespace Blackjack
                 if (player.Name == name)
                     return player;
             }
+            if (croupier.Name == name)
+                return croupier;
+
             return null;
         }
 
@@ -107,33 +114,62 @@ namespace Blackjack
 
         public void BeginGame()
         {
+            int i;
             foreach (Player player in players.M_list)
             {
-                if(!player.Croupier)
-                {
-                    for (int i = 0; i < 2; i++)
+                    for (i = 0; i < 2; i++)
                     {
-                        int j = 1;
-                        while (player.Find(deck.GetAt(deck.Count() - j))) { j--; }
-                        player.AddACard(deck.GetAt(deck.Count() - j));
-                        deck.DeleteAt(deck.Count() - j);
+                        PickACard(player);
                     }
-                }
-                else
-                {
-                    int j = 1;
-                    while (player.Find(deck.GetAt(deck.Count() - j))) { j--; }
-                    player.AddACard(deck.GetAt(deck.Count() - j));
-                    deck.DeleteAt(deck.Count() - j);
-                }
+            }
+            PickACard(GetCroupier());
+
+            Player firstPlayer;
+            i = 0;
+            do
+            {
+                firstPlayer = GetPlayer(i);
+                i++;
+            } while (firstPlayer.Croupier);
+            currentPlayer = firstPlayer.Name;
+        }
+
+        public void NextPlayer()
+        {
+            int i;
+            for (i = 0; i < players.Count(); i++) 
+            {
+                if (players.GetAt(i).Name == currentPlayer)
+                    break;  
+            }
+            i++;
+
+            if (i < players.Count())
+                currentPlayer = players.GetAt(i + 1).Name;
+            
+            if(i>=players.Count())
+            {
+                currentPlayer = GetCroupier().Name;
+                endOfGame = true;
             }
         }
 
-        public void Play(Player player)
+        public void Play()
         {
-            CurrentPlayer = player.Name;
+            PickACard(GetPlayer(currentPlayer));
+        }
 
+        public void Stand()
+        {
 
+        }
+
+        private void PickACard(Player player)
+        {
+            int j = 1;
+            while (player.Find(deck.GetAt(deck.Count() - j)) && j<deck.Count()) { j++; }
+            player.AddACard(deck.GetAt(deck.Count() - j));
+            deck.DeleteAt(deck.Count() - j);
         }
     }
 }

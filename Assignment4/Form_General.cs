@@ -12,9 +12,13 @@ using GameCardLib;
 
 namespace Assignment4
 {
+    //public delegate void Action();
+
     public partial class Form_General : Form
     {
         Game game = null;
+        /*Action action = null;  */
+        bool buttonYes = false, buttonNo = false;
 
         public Form_General()
         {
@@ -60,14 +64,17 @@ namespace Assignment4
 
         private void DisplayTablePlayer(Player player, GroupBox group, Label name, Label score, ListView cards)
         {
-            name.Text = player.ToString();
-            score.Text = player.Score.ToString();
+            if (player != null)
+            {
+                name.Text = player.ToString();
+                score.Text = player.Score.ToString();
 
-            cards.Items.Clear();
-            foreach (Card card in player.Hand.Cards.M_list)
-                cards.Items.Add(card.ToString());
+                cards.Items.Clear();
+                foreach (Card card in player.Hand.Cards.M_list)
+                    cards.Items.Add(card.ToString());
 
-            group.Visible = true;
+                group.Visible = true;
+            }
         }
 
         private void ClearTablePlayer(GroupBox group, Label name, Label score)
@@ -84,7 +91,13 @@ namespace Assignment4
             game = form.Game;
 
             if (game != null)
-                Play();
+            {
+                game.BeginGame();
+                DisplayPlayers();
+                DisplayTable();
+                groupBox_Play.Visible = true;
+            }
+            //Play();
         }
 
         private void Play()
@@ -94,16 +107,26 @@ namespace Assignment4
             // Each player plays
             for(int i =0;i<game.NbPlayers;i++)
             {
-                DisplayTable();
                 if(!game.GetPlayer(i).Croupier)
                 {
+                    game.CurrentPlayer = game.GetPlayer(i).Name;
+                    DisplayTable();
                     groupBox_Play.Visible = true;
-                    game.Play(game.GetPlayer(i));
+                    do
+                    {
+                        buttonNo = false; buttonYes = false;
+                        while (!buttonYes && !buttonNo) { }
+                    } while (!buttonNo);
+                    groupBox_Play.Visible = false;
                 }
-                DisplayTable();
             }
             // The croupier plays
-            game.Play(game.GetCroupier());
+            //game.Play(game.GetCroupier());
+            game.CurrentPlayer = game.GetCroupier().Name;
+            DisplayTable();
+            groupBox_Play.Visible = true;
+            buttonNo = false; buttonYes = false;
+            groupBox_Play.Visible = false;
         }
 
         private void button_Shuffle_Click(object sender, EventArgs e)
@@ -147,12 +170,19 @@ namespace Assignment4
 
         private void button_Yes_Click(object sender, EventArgs e)
         {
-
+            //action = game.Play;
+            game.Play();
+            DisplayTable();
+            DisplayPlayers();
         }
 
         private void button_No_Click(object sender, EventArgs e)
         {
-
+            //action = game.Stand;
+            //game.Stand();
+            game.NextPlayer();
+            DisplayTable();
+            DisplayPlayers();
         }
     }
 }

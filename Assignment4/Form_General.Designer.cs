@@ -34,6 +34,9 @@ namespace Assignment4
             this.button_NewGame = new System.Windows.Forms.Button();
             this.listBox_Croupier = new System.Windows.Forms.ListBox();
             this.groupBox_Table = new System.Windows.Forms.GroupBox();
+            this.groupBox_Play = new System.Windows.Forms.GroupBox();
+            this.button_No = new System.Windows.Forms.Button();
+            this.button_Yes = new System.Windows.Forms.Button();
             this.groupBox_OtherPlayer = new System.Windows.Forms.GroupBox();
             this.listView_OtherPlayer = new System.Windows.Forms.ListView();
             this.label_ScoreOtherPlayer = new System.Windows.Forms.Label();
@@ -47,14 +50,11 @@ namespace Assignment4
             this.listBox_Losers = new System.Windows.Forms.ListBox();
             this.label_Winners = new System.Windows.Forms.Label();
             this.listBox_Winners = new System.Windows.Forms.ListBox();
-            this.groupBox_Play = new System.Windows.Forms.GroupBox();
-            this.button_Yes = new System.Windows.Forms.Button();
-            this.button_No = new System.Windows.Forms.Button();
             this.groupBox_Menu.SuspendLayout();
             this.groupBox_Table.SuspendLayout();
+            this.groupBox_Play.SuspendLayout();
             this.groupBox_OtherPlayer.SuspendLayout();
             this.groupBox_CurrentPlayer.SuspendLayout();
-            this.groupBox_Play.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_Menu
@@ -110,6 +110,37 @@ namespace Assignment4
             this.groupBox_Table.TabIndex = 2;
             this.groupBox_Table.TabStop = false;
             this.groupBox_Table.Text = "Table";
+            // 
+            // groupBox_Play
+            // 
+            this.groupBox_Play.Controls.Add(this.button_No);
+            this.groupBox_Play.Controls.Add(this.button_Yes);
+            this.groupBox_Play.Location = new System.Drawing.Point(18, 493);
+            this.groupBox_Play.Name = "groupBox_Play";
+            this.groupBox_Play.Size = new System.Drawing.Size(408, 120);
+            this.groupBox_Play.TabIndex = 2;
+            this.groupBox_Play.TabStop = false;
+            this.groupBox_Play.Text = "Do you want to take an other card?";
+            // 
+            // button_No
+            // 
+            this.button_No.Location = new System.Drawing.Point(229, 31);
+            this.button_No.Name = "button_No";
+            this.button_No.Size = new System.Drawing.Size(77, 69);
+            this.button_No.TabIndex = 1;
+            this.button_No.Text = "No";
+            this.button_No.UseVisualStyleBackColor = true;
+            this.button_No.Click += new System.EventHandler(this.button_No_Click);
+            // 
+            // button_Yes
+            // 
+            this.button_Yes.Location = new System.Drawing.Point(85, 31);
+            this.button_Yes.Name = "button_Yes";
+            this.button_Yes.Size = new System.Drawing.Size(77, 69);
+            this.button_Yes.TabIndex = 0;
+            this.button_Yes.Text = "Yes";
+            this.button_Yes.UseVisualStyleBackColor = true;
+            this.button_Yes.Click += new System.EventHandler(this.button_Yes_Click);
             // 
             // groupBox_OtherPlayer
             // 
@@ -247,37 +278,6 @@ namespace Assignment4
             this.listBox_Winners.TabIndex = 6;
             this.listBox_Winners.SelectedIndexChanged += new System.EventHandler(this.listBox_Winners_SelectedIndexChanged);
             // 
-            // groupBox_Play
-            // 
-            this.groupBox_Play.Controls.Add(this.button_No);
-            this.groupBox_Play.Controls.Add(this.button_Yes);
-            this.groupBox_Play.Location = new System.Drawing.Point(18, 493);
-            this.groupBox_Play.Name = "groupBox_Play";
-            this.groupBox_Play.Size = new System.Drawing.Size(408, 120);
-            this.groupBox_Play.TabIndex = 2;
-            this.groupBox_Play.TabStop = false;
-            this.groupBox_Play.Text = "Do you want to take an other card?";
-            // 
-            // button_Yes
-            // 
-            this.button_Yes.Location = new System.Drawing.Point(85, 31);
-            this.button_Yes.Name = "button_Yes";
-            this.button_Yes.Size = new System.Drawing.Size(77, 69);
-            this.button_Yes.TabIndex = 0;
-            this.button_Yes.Text = "Yes";
-            this.button_Yes.UseVisualStyleBackColor = true;
-            this.button_Yes.Click += new System.EventHandler(this.button_Yes_Click);
-            // 
-            // button_No
-            // 
-            this.button_No.Location = new System.Drawing.Point(229, 31);
-            this.button_No.Name = "button_No";
-            this.button_No.Size = new System.Drawing.Size(77, 69);
-            this.button_No.TabIndex = 1;
-            this.button_No.Text = "No";
-            this.button_No.UseVisualStyleBackColor = true;
-            this.button_No.Click += new System.EventHandler(this.button_No_Click);
-            // 
             // Form_General
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -295,11 +295,11 @@ namespace Assignment4
             this.Text = "Form1";
             this.groupBox_Menu.ResumeLayout(false);
             this.groupBox_Table.ResumeLayout(false);
+            this.groupBox_Play.ResumeLayout(false);
             this.groupBox_OtherPlayer.ResumeLayout(false);
             this.groupBox_OtherPlayer.PerformLayout();
             this.groupBox_CurrentPlayer.ResumeLayout(false);
             this.groupBox_CurrentPlayer.PerformLayout();
-            this.groupBox_Play.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

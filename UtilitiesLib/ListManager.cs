@@ -82,7 +82,10 @@ namespace GameCardLib
 
         public T GetAt(int anIndex)
         {
+            if(anIndex>=0 && anIndex<Count())
                 return m_list[anIndex];
+
+            return default(T);
         }
 
         public bool CheckIndex(int index)

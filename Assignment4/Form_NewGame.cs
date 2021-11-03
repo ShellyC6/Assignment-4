@@ -16,12 +16,14 @@ namespace Assignment4
     public partial class Form_NewGame : Form
     {
         ListManager<Player> players;
+        Player croupier;
         Game game = null;
 
         public Form_NewGame()
         {
             InitializeComponent();
             players = new ListManager<Player>();
+            croupier = null;
         }
 
         public Game Game
@@ -32,6 +34,7 @@ namespace Assignment4
         private void DisplayPlayers()
         {
             listBox_Players.Items.Clear();
+            if (croupier != null) { listBox_Players.Items.Add(croupier.ToString()); }
             foreach (Player player in players.M_list)
             {
                 listBox_Players.Items.Add(player.ToString());
@@ -40,21 +43,27 @@ namespace Assignment4
 
         private bool ValidateInputGame()
         {
-            bool croupier=false, player = false;
-            for (int i = 0; i < players.Count(); i++) 
+            //bool isPlayer = false, isCroupier=false;
+            /*for (int i = 0; i < players.Count(); i++) 
             {
                 if (players.GetAt(i).Croupier)
-                    croupier = true;
+                {
+                    //croupier = players.GetAt(i);
+                    //players.DeleteAt(i);
+                    //i--;
+                    isCroupier = true;
+                }
                 else
-                    player = true;
-            }
+                    isPlayer = true;
+            }*/
 
-            if(!croupier)
+
+            if (croupier == null) 
             {
                 MessageBox.Show("You need a croupier to play");
                 return false;
             }
-            if(!player)
+            if(players.Count()==0)
             {
                 MessageBox.Show("You need at least one player");
                 return false;
@@ -79,9 +88,18 @@ namespace Assignment4
         {
             if(ValidateInputGame())
             {
+                /*for (int i = 0; i < players.Count(); i++)
+                {
+                    if (players.GetAt(i).Croupier)
+                    {
+                        croupier = players.GetAt(i);
+                        players.DeleteAt(i);
+                        i--;
+                    }
+                }*/
                 int number;
                 Int32.TryParse(textBox_NbDecks.Text, out number);
-                game = new Game(players.Count(), number, players);
+                game = new Game(players.Count(), number, players, croupier);
                 Close();
             }
         }
@@ -116,7 +134,12 @@ namespace Assignment4
         {
             // Add the new player if it doesn't exist already
             if (ValidateInputPlayer())
-                players.Add(new Player(textBox_NameNewPlayer.Text, checkBox_Croupier.Checked));
+            {
+                if (checkBox_Croupier.Checked)
+                    croupier = new Player(textBox_NameNewPlayer.Text, checkBox_Croupier.Checked);
+                else
+                    players.Add(new Player(textBox_NameNewPlayer.Text, checkBox_Croupier.Checked));
+            }
 
             // Display the players
             DisplayPlayers();
