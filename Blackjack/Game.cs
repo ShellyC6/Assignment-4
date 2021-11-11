@@ -12,8 +12,6 @@ namespace Blackjack
         ListManager<Player> players;
         string currentPlayer;
         Player croupier;
-        //bool endOfGame;
-
         Deck deck;
 
         public Game(int _nbPlayers, int _nbDecks, ListManager<Player> _players, Player _croupier)
@@ -22,7 +20,6 @@ namespace Blackjack
             nbDecks = _nbDecks;
             players = _players;
             croupier = _croupier;
-            //endOfGame = false;
             deck = new Deck();
             InitialiseDeck();
         }
@@ -42,11 +39,6 @@ namespace Blackjack
             get { return currentPlayer; }
             set { currentPlayer = value; }
         }
-
-        /*public bool EndOfGame
-        {
-            get { return endOfGame; }
-        }*/
 
         public Player GetCroupier()
         {
@@ -134,6 +126,7 @@ namespace Blackjack
                 i++;
             } while (firstPlayer.Croupier);
             currentPlayer = firstPlayer.Name;
+            CheckAllWinners();
         }
 
         public void NextPlayer()
@@ -147,7 +140,7 @@ namespace Blackjack
             i++;
 
             if (i < players.Count())
-                currentPlayer = players.GetAt(i + 1).Name;
+                currentPlayer = players.GetAt(i).Name;
             else if (i == players.Count())
                 currentPlayer = GetCroupier().Name;
             else if (i > players.Count())
@@ -158,11 +151,6 @@ namespace Blackjack
         {
             PickACard(GetPlayer(currentPlayer));
             isWinner(GetPlayer(currentPlayer));
-        }
-
-        public void Stand()
-        {
-
         }
 
         private void PickACard(Player player)
@@ -181,6 +169,27 @@ namespace Blackjack
                     player.Winner = false;
                 else
                     player.Winner = true;
+                /*if (player.Score > 21)
+                    player.Winner = false;
+                else if (croupier.Score > 21)
+                    player.Winner = true;
+                else if (player.Score > croupier.Score)
+                    player.Winner = true;
+                else
+                    player.Winner = false;*/
+
+                /*if (player.Score <= 21 && (croupier.Score > 21 || player.Score > croupier.Score))
+                    player.Winner = true;
+                else
+                    player.Winner = false;*/
+            }
+        }
+
+        public void CheckAllWinners()
+        {
+            for (int i = 0; i < players.Count(); i++) 
+            {
+                isWinner(players.GetAt(i));
             }
         }
     }

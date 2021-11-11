@@ -42,7 +42,11 @@ namespace GameCardLib
         public int Score
         {
             get { return score; }
-            set { if (value > 0) score = value; }
+            set 
+            { 
+                if (value > 0) score = value; 
+                //if(score>21) activate delegate
+            }
         }
 
         public bool Winner

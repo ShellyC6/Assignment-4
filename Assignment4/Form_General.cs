@@ -98,6 +98,7 @@ namespace Assignment4
 
             if (game != null)
             {
+                Initialise();
                 game.BeginGame();
                 DisplayPlayers();
                 DisplayTable();
@@ -191,13 +192,15 @@ namespace Assignment4
 
         public string checkWinner()
         {
-            if (listBox_Winners.Items.Count == 0)
+            if (listBox_Winners.Items.Count == 0 && game.GetCroupier().Score <= 21) 
                 return "The croupier wins";
             return "The croupier loses";
         }
 
         public void EndOfGame(object sender, EventArgs e)
         {
+            game.CheckAllWinners();
+            DisplayPlayers();
             groupBox_Play.Visible = false;
             label_EndOfGame.Text = checkWinner();
             label_EndOfGame.Visible = true;
