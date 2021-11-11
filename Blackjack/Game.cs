@@ -5,12 +5,14 @@ namespace Blackjack
 {
     public class Game
     {
+        public event EventHandler EndOfGame;
+
         int nbPlayers;
         int nbDecks;
         ListManager<Player> players;
         string currentPlayer;
         Player croupier;
-        bool endOfGame;
+        //bool endOfGame;
 
         Deck deck;
 
@@ -20,7 +22,7 @@ namespace Blackjack
             nbDecks = _nbDecks;
             players = _players;
             croupier = _croupier;
-            endOfGame = false;
+            //endOfGame = false;
             deck = new Deck();
             InitialiseDeck();
         }
@@ -41,10 +43,10 @@ namespace Blackjack
             set { currentPlayer = value; }
         }
 
-        public bool EndOfGame
+        /*public bool EndOfGame
         {
             get { return endOfGame; }
-        }
+        }*/
 
         public Player GetCroupier()
         {
@@ -146,17 +148,16 @@ namespace Blackjack
 
             if (i < players.Count())
                 currentPlayer = players.GetAt(i + 1).Name;
-            
-            if(i>=players.Count())
-            {
+            else if (i == players.Count())
                 currentPlayer = GetCroupier().Name;
-                endOfGame = true;
-            }
+            else if (i > players.Count())
+                EndOfGame?.Invoke(this, EventArgs.Empty);
         }
 
         public void Play()
         {
             PickACard(GetPlayer(currentPlayer));
+            isWinner(GetPlayer(currentPlayer));
         }
 
         public void Stand()
@@ -170,6 +171,17 @@ namespace Blackjack
             while (player.Find(deck.GetAt(deck.Count() - j)) && j<deck.Count()) { j++; }
             player.AddACard(deck.GetAt(deck.Count() - j));
             deck.DeleteAt(deck.Count() - j);
+        }
+
+        public void isWinner(Player player)
+        {
+            if(!player.Croupier)
+            {
+                if (player.Score > 21 || player.Score < croupier.Score)
+                    player.Winner = false;
+                else
+                    player.Winner = true;
+            }
         }
     }
 }

@@ -50,6 +50,7 @@ namespace Assignment4
             this.listBox_Losers = new System.Windows.Forms.ListBox();
             this.label_Winners = new System.Windows.Forms.Label();
             this.listBox_Winners = new System.Windows.Forms.ListBox();
+            this.label_EndOfGame = new System.Windows.Forms.Label();
             this.groupBox_Menu.SuspendLayout();
             this.groupBox_Table.SuspendLayout();
             this.groupBox_Play.SuspendLayout();
@@ -100,6 +101,7 @@ namespace Assignment4
             // 
             // groupBox_Table
             // 
+            this.groupBox_Table.Controls.Add(this.label_EndOfGame);
             this.groupBox_Table.Controls.Add(this.groupBox_Play);
             this.groupBox_Table.Controls.Add(this.groupBox_OtherPlayer);
             this.groupBox_Table.Controls.Add(this.groupBox_CurrentPlayer);
@@ -278,6 +280,18 @@ namespace Assignment4
             this.listBox_Winners.TabIndex = 6;
             this.listBox_Winners.SelectedIndexChanged += new System.EventHandler(this.listBox_Winners_SelectedIndexChanged);
             // 
+            // label_EndOfGame
+            // 
+            this.label_EndOfGame.AutoSize = true;
+            this.label_EndOfGame.Font = new System.Drawing.Font("Verdana Pro Cond Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_EndOfGame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label_EndOfGame.Location = new System.Drawing.Point(538, 540);
+            this.label_EndOfGame.Name = "label_EndOfGame";
+            this.label_EndOfGame.Size = new System.Drawing.Size(96, 31);
+            this.label_EndOfGame.TabIndex = 3;
+            this.label_EndOfGame.Text = "Winner";
+            this.label_EndOfGame.Visible = false;
+            // 
             // Form_General
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -295,6 +309,7 @@ namespace Assignment4
             this.Text = "Form1";
             this.groupBox_Menu.ResumeLayout(false);
             this.groupBox_Table.ResumeLayout(false);
+            this.groupBox_Table.PerformLayout();
             this.groupBox_Play.ResumeLayout(false);
             this.groupBox_OtherPlayer.ResumeLayout(false);
             this.groupBox_OtherPlayer.PerformLayout();
@@ -328,6 +343,7 @@ namespace Assignment4
         private System.Windows.Forms.GroupBox groupBox_Play;
         private System.Windows.Forms.Button button_No;
         private System.Windows.Forms.Button button_Yes;
+        private System.Windows.Forms.Label label_EndOfGame;
     }
 }
 

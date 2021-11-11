@@ -111,20 +111,27 @@ namespace Assignment4
                 MessageBox.Show("The new player needs a name");
                 return false;
             }
+
+            // Search if the name exists
+            if(croupier!= null && croupier.Name == textBox_NameNewPlayer.Text)
+            {
+                MessageBox.Show("This name is already used by another player");
+                return false;
+            }
             for (int i = 0; i < players.Count(); i++)
             {
-                // Search if the name exists
                 if (players.GetAt(i).Name == textBox_NameNewPlayer.Text)
                 {
                     MessageBox.Show("This name is already used by another player");
                     return false;
                 }
-                // Search if there is more than one croupier
-                if(checkBox_Croupier.Checked && players.GetAt(i).Croupier)
-                {
-                    MessageBox.Show("There is already a croupier");
-                    return false;
-                }
+            }
+
+            // Search if there is more than one croupier
+            if (checkBox_Croupier.Checked && croupier != null) 
+            {
+                MessageBox.Show("There is already a croupier");
+                return false;
             }
 
             return true;

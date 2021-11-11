@@ -23,9 +23,15 @@ namespace Assignment4
         public Form_General()
         {
             InitializeComponent();
+            Initialise();
+        }
+
+        public void Initialise()
+        {
             groupBox_Play.Visible = false;
             ClearTablePlayer(groupBox_CurrentPlayer, label_NameCurrentPlayer, label_ScoreCurrentPlayer);
             ClearTablePlayer(groupBox_OtherPlayer, label_NameOtherPlayer, label_ScoreOtherPlayer);
+            label_EndOfGame.Visible = false;
         }
 
         private void DisplayPlayers()
@@ -96,6 +102,7 @@ namespace Assignment4
                 DisplayPlayers();
                 DisplayTable();
                 groupBox_Play.Visible = true;
+                game.EndOfGame += EndOfGame;
             }
             //Play();
         }
@@ -170,7 +177,6 @@ namespace Assignment4
 
         private void button_Yes_Click(object sender, EventArgs e)
         {
-            //action = game.Play;
             game.Play();
             DisplayTable();
             DisplayPlayers();
@@ -178,11 +184,23 @@ namespace Assignment4
 
         private void button_No_Click(object sender, EventArgs e)
         {
-            //action = game.Stand;
-            //game.Stand();
             game.NextPlayer();
             DisplayTable();
             DisplayPlayers();
+        }
+
+        public string checkWinner()
+        {
+            if (listBox_Winners.Items.Count == 0)
+                return "The croupier wins";
+            return "The croupier loses";
+        }
+
+        public void EndOfGame(object sender, EventArgs e)
+        {
+            groupBox_Play.Visible = false;
+            label_EndOfGame.Text = checkWinner();
+            label_EndOfGame.Visible = true;
         }
     }
 }

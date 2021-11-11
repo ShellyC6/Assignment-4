@@ -24,4 +24,3 @@ C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET
 C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Assignment4\obj\Debug\net5.0-windows\Assignment4.Form_General.resources
 C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Assignment4\obj\Debug\net5.0-windows\Assignment4.Form_NewGame.resources
 C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Assignment4\obj\Debug\net5.0-windows\Assignment4.csproj.CopyComplete
-C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\Assignment4\obj\Debug\net5.0-windows\Assignment4.Form_NewCard.resources
