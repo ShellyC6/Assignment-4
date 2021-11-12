@@ -12,12 +12,9 @@ using GameCardLib;
 
 namespace Assignment4
 {
-    //public delegate void Action();
-
     public partial class Form_General : Form
     {
         Game game = null;
-        /*Action action = null;  */
         bool buttonYes = false, buttonNo = false;
 
         public Form_General()
@@ -105,10 +102,9 @@ namespace Assignment4
                 groupBox_Play.Visible = true;
                 game.EndOfGame += EndOfGame;
             }
-            //Play();
         }
 
-        private void Play()
+        /*private void Play()
         {
             game.BeginGame();
             DisplayPlayers();
@@ -135,7 +131,7 @@ namespace Assignment4
             groupBox_Play.Visible = true;
             buttonNo = false; buttonYes = false;
             groupBox_Play.Visible = false;
-        }
+        }*/
 
         private void button_Shuffle_Click(object sender, EventArgs e)
         {

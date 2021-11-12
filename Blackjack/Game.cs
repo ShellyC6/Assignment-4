@@ -165,10 +165,13 @@ namespace Blackjack
         {
             if(!player.Croupier)
             {
-                if (player.Score > 21 || player.Score < croupier.Score)
+                //if (player.Score > 21 || player.Score <= croupier.Score) && croupier.Score <= 21
+                if ((croupier.Score <= 21 && player.Score <= croupier.Score) || player.Score > 21)
                     player.Winner = false;
                 else
                     player.Winner = true;
+
+
                 /*if (player.Score > 21)
                     player.Winner = false;
                 else if (croupier.Score > 21)
