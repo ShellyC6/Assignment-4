@@ -34,6 +34,7 @@ namespace Assignment4
             this.button_NewGame = new System.Windows.Forms.Button();
             this.listBox_Croupier = new System.Windows.Forms.ListBox();
             this.groupBox_Table = new System.Windows.Forms.GroupBox();
+            this.label_EndOfGame = new System.Windows.Forms.Label();
             this.groupBox_Play = new System.Windows.Forms.GroupBox();
             this.button_No = new System.Windows.Forms.Button();
             this.button_Yes = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@ namespace Assignment4
             this.listBox_Losers = new System.Windows.Forms.ListBox();
             this.label_Winners = new System.Windows.Forms.Label();
             this.listBox_Winners = new System.Windows.Forms.ListBox();
-            this.label_EndOfGame = new System.Windows.Forms.Label();
             this.groupBox_Menu.SuspendLayout();
             this.groupBox_Table.SuspendLayout();
             this.groupBox_Play.SuspendLayout();
@@ -112,6 +112,18 @@ namespace Assignment4
             this.groupBox_Table.TabIndex = 2;
             this.groupBox_Table.TabStop = false;
             this.groupBox_Table.Text = "Table";
+            // 
+            // label_EndOfGame
+            // 
+            this.label_EndOfGame.AutoSize = true;
+            this.label_EndOfGame.Font = new System.Drawing.Font("Verdana Pro Cond Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_EndOfGame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label_EndOfGame.Location = new System.Drawing.Point(538, 540);
+            this.label_EndOfGame.Name = "label_EndOfGame";
+            this.label_EndOfGame.Size = new System.Drawing.Size(96, 31);
+            this.label_EndOfGame.TabIndex = 3;
+            this.label_EndOfGame.Text = "Winner";
+            this.label_EndOfGame.Visible = false;
             // 
             // groupBox_Play
             // 
@@ -279,18 +291,6 @@ namespace Assignment4
             this.listBox_Winners.Size = new System.Drawing.Size(237, 204);
             this.listBox_Winners.TabIndex = 6;
             this.listBox_Winners.SelectedIndexChanged += new System.EventHandler(this.listBox_Winners_SelectedIndexChanged);
-            // 
-            // label_EndOfGame
-            // 
-            this.label_EndOfGame.AutoSize = true;
-            this.label_EndOfGame.Font = new System.Drawing.Font("Verdana Pro Cond Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_EndOfGame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label_EndOfGame.Location = new System.Drawing.Point(538, 540);
-            this.label_EndOfGame.Name = "label_EndOfGame";
-            this.label_EndOfGame.Size = new System.Drawing.Size(96, 31);
-            this.label_EndOfGame.TabIndex = 3;
-            this.label_EndOfGame.Text = "Winner";
-            this.label_EndOfGame.Visible = false;
             // 
             // Form_General
             // 

@@ -7,10 +7,10 @@ namespace GameCardLib
 {
     public enum Suit
     {
-        clubs,
-        diamonds,
-        hearts,
-        spades
+        clubs = 0,
+        diamonds = 1,
+        hearts = 2,
+        spades = 3
     }
 
     public enum Value

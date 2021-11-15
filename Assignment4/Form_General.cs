@@ -15,12 +15,24 @@ namespace Assignment4
     public partial class Form_General : Form
     {
         Game game = null;
-        bool buttonYes = false, buttonNo = false;
 
         public Form_General()
         {
             InitializeComponent();
             Initialise();
+
+            ImageList myImageList = new ImageList();
+            myImageList.ImageSize = new Size(75, 75);
+            Deck fullDeck = new Deck();
+            fullDeck.AddAFullDeck();
+            for (int i = 0; i < fullDeck.Count(); i++) 
+            {
+                myImageList.Images.Add(Bitmap.FromFile("../Cards/"+fullDeck.GetAt(i).GetNameImage()+".gif"));
+            }
+            listView_CurrentPlayer.LargeImageList = myImageList;
+            listView_OtherPlayer.LargeImageList = myImageList;
+
+            //maListView.Items.Add(new ListViewItem("MonTexte", MonIndexImage));
         }
 
         public void Initialise()
@@ -74,7 +86,9 @@ namespace Assignment4
 
                 cards.Items.Clear();
                 foreach (Card card in player.Hand.Cards.M_list)
-                    cards.Items.Add(card.ToString());
+                    cards.Items.Add(new ListViewItem(card.ToString(), card.Id));
+
+                //maListView.Items.Add(new ListViewItem("MonTexte", MonIndexImage));
 
                 group.Visible = true;
             }
