@@ -186,7 +186,14 @@ namespace Assignment4
             DisplayTable();
             DisplayPlayers();
             await Task.Delay(1000);
-            while (game.GetPlayer(game.CurrentPlayer).Score < 14)
+
+            int scoreMax;
+            if (!game.GetPlayer(game.CurrentPlayer).Croupier)
+                scoreMax = 14;
+            else
+                scoreMax = 17;
+
+            while (game.GetPlayer(game.CurrentPlayer).Score < scoreMax)
             {
                 game.Play();
                 DisplayTable();
