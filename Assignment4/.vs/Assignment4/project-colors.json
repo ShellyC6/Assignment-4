@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ec011b62-9f1e-4c31-b594-22a0858d168f": {
+      "ProjectGuid": "ec011b62-9f1e-4c31-b594-22a0858d168f",
+      "DisplayName": "Assignment4",
+      "ColorIndex": 0
+    },
+    "42193cc8-e7d5-429d-9f83-d46fa269c0e1": {
+      "ProjectGuid": "42193cc8-e7d5-429d-9f83-d46fa269c0e1",
+      "DisplayName": "GameCardLib",
+      "ColorIndex": 1
+    },
+    "447aeb6f-3b14-4f8d-a2e2-84823a81823d": {
+      "ProjectGuid": "447aeb6f-3b14-4f8d-a2e2-84823a81823d",
+      "DisplayName": "Blackjack",
+      "ColorIndex": 2
+    },
+    "9cc29f99-da65-46f4-8d9f-1c6002edf393": {
+      "ProjectGuid": "9cc29f99-da65-46f4-8d9f-1c6002edf393",
+      "DisplayName": "UtilitiesLib",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
