@@ -110,11 +110,13 @@ namespace Assignment4
             if (game != null)
             {
                 Initialise();
+                game.EndOfGame += EndOfGame;
+                game.PlayComputer += PlayComputer;
+                game.PlayClassic += PlayClassic;
                 game.BeginGame();
                 DisplayPlayers();
                 DisplayTable();
-                groupBox_Play.Visible = true;
-                game.EndOfGame += EndOfGame;
+                //groupBox_Play.Visible = true;
             }
         }
 
@@ -167,6 +169,36 @@ namespace Assignment4
         private void button_No_Click(object sender, EventArgs e)
         {
             game.NextPlayer();
+            DisplayTable();
+            DisplayPlayers();
+        }
+
+        public void PlayClassic(object sender, EventArgs e)
+        {
+            DisplayTable();
+            DisplayPlayers();
+            groupBox_Play.Visible = true;
+        }
+
+        async public void PlayComputer(object sender, EventArgs e)
+        {
+            groupBox_Play.Visible = false;
+            DisplayTable();
+            DisplayPlayers();
+            await Task.Delay(1000);
+            while (game.GetPlayer(game.CurrentPlayer).Score < 14)
+            {
+                game.Play();
+                DisplayTable();
+                DisplayPlayers();
+                //System.Threading.Thread.Sleep(2000);
+                await Task.Delay(1000);
+            }
+            game.NextPlayer();
+
+            //System.Threading.Thread.Sleep(3000);
+            await Task.Delay(2000);
+
             DisplayTable();
             DisplayPlayers();
         }
