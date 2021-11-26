@@ -168,8 +168,22 @@ namespace Blackjack
         {
             int j = 1;
             while (player.Find(deck.GetAt(deck.Count() - j)) && j<deck.Count()) { j++; }
+            if(j>=deck.Count())
+            {
+                deck.AddAFullDeck();
+                Shuffle();
+                j = 1;
+                while (player.Find(deck.GetAt(deck.Count() - j)) && j < deck.Count()) { j++; }
+            }
+
             player.AddACard(deck.GetAt(deck.Count() - j));
             deck.DeleteAt(deck.Count() - j);
+
+            if (deck.Count() == 0)
+            {
+                deck.AddAFullDeck();
+                Shuffle();
+            }
         }
 
         public void isWinner(Player player)

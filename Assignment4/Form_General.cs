@@ -162,15 +162,11 @@ namespace Assignment4
         private void button_Yes_Click(object sender, EventArgs e)
         {
             game.Play();
-            DisplayTable();
-            DisplayPlayers();
         }
 
         private void button_No_Click(object sender, EventArgs e)
         {
             game.NextPlayer();
-            DisplayTable();
-            DisplayPlayers();
         }
 
         public void PlayClassic(object sender, EventArgs e)
@@ -191,23 +187,18 @@ namespace Assignment4
             if (!game.GetPlayer(game.CurrentPlayer).Croupier)
                 scoreMax = 14;
             else
-                scoreMax = 17;
+                scoreMax = 16;
 
             while (game.GetPlayer(game.CurrentPlayer).Score < scoreMax)
             {
                 game.Play();
                 DisplayTable();
                 DisplayPlayers();
-                //System.Threading.Thread.Sleep(2000);
                 await Task.Delay(1000);
             }
             game.NextPlayer();
 
-            //System.Threading.Thread.Sleep(3000);
             await Task.Delay(2000);
-
-            DisplayTable();
-            DisplayPlayers();
         }
 
         public string checkWinner()
