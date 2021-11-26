@@ -118,35 +118,6 @@ namespace Assignment4
             }
         }
 
-        /*private void Play()
-        {
-            game.BeginGame();
-            DisplayPlayers();
-            // Each player plays
-            for(int i =0;i<game.NbPlayers;i++)
-            {
-                if(!game.GetPlayer(i).Croupier)
-                {
-                    game.CurrentPlayer = game.GetPlayer(i).Name;
-                    DisplayTable();
-                    groupBox_Play.Visible = true;
-                    do
-                    {
-                        buttonNo = false; buttonYes = false;
-                        while (!buttonYes && !buttonNo) { }
-                    } while (!buttonNo);
-                    groupBox_Play.Visible = false;
-                }
-            }
-            // The croupier plays
-            //game.Play(game.GetCroupier());
-            game.CurrentPlayer = game.GetCroupier().Name;
-            DisplayTable();
-            groupBox_Play.Visible = true;
-            buttonNo = false; buttonYes = false;
-            groupBox_Play.Visible = false;
-        }*/
-
         private void button_Shuffle_Click(object sender, EventArgs e)
         {
             if (game != null)

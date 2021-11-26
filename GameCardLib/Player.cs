@@ -8,7 +8,6 @@ namespace GameCardLib
 {
     public class Player
     {
-        //Hand hand;
         Deck hand;
         string name;
         bool croupier;
@@ -45,7 +44,6 @@ namespace GameCardLib
             set 
             { 
                 if (value > 0) score = value; 
-                //if(score>21) activate delegate
             }
         }
 
@@ -66,7 +64,7 @@ namespace GameCardLib
             return String;
         }
 
-        public string ToStringScore()
+        public virtual string ToStringScore()
         {
             return Name + "\t" + Score;
         }

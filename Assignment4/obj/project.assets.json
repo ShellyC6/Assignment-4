@@ -66,19 +66,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shell\\.nuget\\packages\\": {}
+    "C:\\Users\\Shelly\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Assignment4\\Assignment4.csproj",
+      "projectUniqueName": "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\Assignment4\\Assignment4.csproj",
       "projectName": "Assignment4",
-      "projectPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Assignment4\\Assignment4.csproj",
-      "packagesPath": "C:\\Users\\shell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Assignment4\\obj\\",
+      "projectPath": "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\Assignment4\\Assignment4.csproj",
+      "packagesPath": "C:\\Users\\Shelly\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\Assignment4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\shell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Shelly\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -92,14 +92,14 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Blackjack\\Blackjack.csproj": {
-              "projectPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Blackjack\\Blackjack.csproj"
+            "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\Blackjack\\Blackjack.csproj": {
+              "projectPath": "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\Blackjack\\Blackjack.csproj"
             },
-            "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\GameCardLib\\GameCardLib.csproj": {
-              "projectPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\GameCardLib\\GameCardLib.csproj"
+            "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\GameCardLib\\GameCardLib.csproj": {
+              "projectPath": "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\GameCardLib\\GameCardLib.csproj"
             },
-            "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\UtilitiesLib\\UtilitiesLib.csproj": {
-              "projectPath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\UtilitiesLib\\UtilitiesLib.csproj"
+            "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\UtilitiesLib\\UtilitiesLib.csproj": {
+              "projectPath": "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\UtilitiesLib\\UtilitiesLib.csproj"
             }
           }
         }
@@ -123,6 +123,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.12, 5.0.12]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -131,7 +149,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

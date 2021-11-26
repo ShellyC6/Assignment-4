@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "GGsjIDEwTvvxNXzg5U+pMmp2L0JqBNYkLG41hVGZY4oCvvURtFcNWIlYtMk3sbPVui33OrZ1qVyHyetMwqeCUw==",
+  "dgSpecHash": "Us1gLxhMQV+y6izpKZ41U/fBRTzKqIRBrj5L7iw1KQtX9YHTnryhxnean+9//uCjgRvI+9Rl8FXUkmye6Z700Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\GameCardLib\\GameCardLib.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\GameCardLib\\GameCardLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

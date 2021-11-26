@@ -13,3 +13,18 @@ C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET
 C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.dll
 C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\ref\GameCardLib.dll
 C:\Users\shell\Shelly\Cours\ING3 - S5 - International\Programming in C# and .NET\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.pdb
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\bin\Debug\net5.0\GameCardLib.deps.json
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\bin\Debug\net5.0\GameCardLib.dll
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\bin\Debug\net5.0\ref\GameCardLib.dll
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\bin\Debug\net5.0\GameCardLib.pdb
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\bin\Debug\net5.0\UtilitiesLib.dll
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\bin\Debug\net5.0\UtilitiesLib.pdb
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.csproj.AssemblyReference.cache
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.AssemblyInfoInputs.cache
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.AssemblyInfo.cs
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.csproj.CoreCompileInputs.cache
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.csproj.CopyComplete
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.dll
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\ref\GameCardLib.dll
+C:\Users\Shelly\Desktop\C#\Assignment 4\Assignment-4\GameCardLib\obj\Debug\net5.0\GameCardLib.pdb

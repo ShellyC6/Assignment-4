@@ -43,21 +43,6 @@ namespace Assignment4
 
         private bool ValidateInputGame()
         {
-            //bool isPlayer = false, isCroupier=false;
-            /*for (int i = 0; i < players.Count(); i++) 
-            {
-                if (players.GetAt(i).Croupier)
-                {
-                    //croupier = players.GetAt(i);
-                    //players.DeleteAt(i);
-                    //i--;
-                    isCroupier = true;
-                }
-                else
-                    isPlayer = true;
-            }*/
-
-
             if (croupier == null) 
             {
                 MessageBox.Show("You need a croupier to play");
@@ -88,15 +73,6 @@ namespace Assignment4
         {
             if(ValidateInputGame())
             {
-                /*for (int i = 0; i < players.Count(); i++)
-                {
-                    if (players.GetAt(i).Croupier)
-                    {
-                        croupier = players.GetAt(i);
-                        players.DeleteAt(i);
-                        i--;
-                    }
-                }*/
                 int number;
                 Int32.TryParse(textBox_NbDecks.Text, out number);
                 game = new Game(players.Count(), number, players, croupier);
@@ -137,15 +113,23 @@ namespace Assignment4
             return true;
         }
 
+        private Player AddPlayer()
+        {
+            if (checkBox_Computer.Checked)
+                return new ComputerPlayer(textBox_NameNewPlayer.Text, checkBox_Croupier.Checked);
+            else
+                return new Player(textBox_NameNewPlayer.Text, checkBox_Croupier.Checked);
+        }
+
         private void button_AddPlayer_Click(object sender, EventArgs e)
         {
             // Add the new player if it doesn't exist already
             if (ValidateInputPlayer())
             {
                 if (checkBox_Croupier.Checked)
-                    croupier = new Player(textBox_NameNewPlayer.Text, checkBox_Croupier.Checked);
+                    croupier = AddPlayer();
                 else
-                    players.Add(new Player(textBox_NameNewPlayer.Text, checkBox_Croupier.Checked));
+                    players.Add(AddPlayer());
             }
 
             // Display the players

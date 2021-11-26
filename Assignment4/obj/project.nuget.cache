@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "A+a6AAXLPXkcmVQazv0tSAUhUHfNgbcZcODa1rM2FjACR74O1KA5Db4l2SbaH+UG2FhFmDpmyNwRP9XUt3dPLA==",
+  "dgSpecHash": "kkl1PbW1KIRVXYRF7Er9/P+jm3FCvBYojifP0PwqwZL+EcjDnfXozyLscwPozBaLCyZ6ZMo0UZrSQQar1my1bQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\Assignment4\\Assignment4.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\Assignment4\\Assignment4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

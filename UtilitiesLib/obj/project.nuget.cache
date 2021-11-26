@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MnwfEhq+0ona5PEP+++3aPZ4Gj2NMnHpYC38i7WUf2qqgWIHS3S0o48QvfNmSR6LS9ijnejVhsFKjP7Za160dA==",
+  "dgSpecHash": "aaBFapMSgQke0H62AspZ5FL4eJb4EFGJ0ZxmYDBTQ6DQoPwXWrSjpo+r3Ab5ZqTPrWFtOKmA4BkG8e8nhkarNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shell\\Shelly\\Cours\\ING3 - S5 - International\\Programming in C# and .NET\\Assignment 4\\Assignment-4\\UtilitiesLib\\UtilitiesLib.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Shelly\\Desktop\\C#\\Assignment 4\\Assignment-4\\UtilitiesLib\\UtilitiesLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Shelly\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
